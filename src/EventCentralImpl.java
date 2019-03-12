@@ -1,6 +1,9 @@
 import java.util.EnumMap;
 import java.util.Map;
 
+/**
+ * This class holds event-event_receiver map and dispatch events according it.
+ */
 public final class EventCentralImpl implements EventCentral {
     private final Map<EventClass, EventReceiver> mapRegistry = mapRegistry();
 
@@ -37,5 +40,12 @@ public final class EventCentralImpl implements EventCentral {
     private Exception notRegisteredException(Event event) {
         return new Exception("No such value for key "
                 + event.eventClass().toString() + " exists");
+    }
+
+    @Override
+    public String toString() {
+        return "EventCentralImpl{" +
+                "mapRegistry=" + mapRegistry +
+                '}';
     }
 }
