@@ -1,3 +1,5 @@
+package edd;
+
 import java.util.EnumMap;
 import java.util.Map;
 
@@ -44,7 +46,7 @@ public final class EventCentralImpl implements EventCentral {
 
     @Override
     public String toString() {
-        return "EventCentralImpl{" +
+        return "edd.EventCentralImpl{" +
                 "mapRegistry=" + mapRegistry +
                 '}';
     }

@@ -1,3 +1,5 @@
+package edd;
+
 public interface EventCentral {
     void register(Event event, EventReceiver eventReceiver);
 
