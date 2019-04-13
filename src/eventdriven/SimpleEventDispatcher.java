@@ -1,11 +1,13 @@
 package eventdriven;
 
+import test.ButtonEventHandler;
+
 import java.util.Map;
 
 public class SimpleEventDispatcher implements EventDispatcher {
-    private final Map<EventType,EventHandler<Event>> eventHandlers;
+    private final Map<EventType,EventHandler> eventHandlers;
 
-    public SimpleEventDispatcher(Map<EventType, EventHandler<Event>> eventHandlers) {
+    public SimpleEventDispatcher(Map<EventType, EventHandler> eventHandlers) {
         this.eventHandlers = eventHandlers;
     }
 
